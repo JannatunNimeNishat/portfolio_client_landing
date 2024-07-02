@@ -18,7 +18,7 @@ const ProjectCard = ({ projectData }: { projectData: any }) => {
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="my-3 text-[12px]">{desc}</p>
       {/* links */}
-        <div className="flex items-center gap-3 ">
+        <div className="flex items-center justify-center lg:justify-start gap-3 ">
             {/* git client */}
           <div className="flex flex-col items-center  ">
             <a
