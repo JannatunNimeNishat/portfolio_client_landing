@@ -1,7 +1,6 @@
 import {
   GithubOutlined,
   LinkedinOutlined,
-  MediumOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
 import PrimaryBtn from "../../Button/PrimaryBtn";
