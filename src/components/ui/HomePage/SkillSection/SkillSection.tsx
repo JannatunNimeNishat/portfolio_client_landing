@@ -1,9 +1,26 @@
+import SkillTabs from "./SkillTabs/SkillTabs";
 
 
-const SkillSection = () => {
+const SkillSection = async() => {
+    const db_url = process.env.NEXT_PUBLIC_DB_URL || "";
+    const res = await fetch(`${db_url}/skill`, {
+      next: {
+        revalidate: 5,
+      },
+    });
+    const skillSectionData = await res.json();
+    const webSkills = skillSectionData?.data?.filter((skill:any) => skill?.category === "Web");
+    const programmingSkills = skillSectionData?.data?.filter((skill:any) => skill?.category === "Programming");
+    console.log(programmingSkills);
+
     return (
-        <div>
-            
+        <div className=" min-h-[85vh]  relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
+            <div className="lg:w-8/12 mx-auto">
+                
+               <SkillTabs webSkills={webSkills}
+               programmingSkills={programmingSkills}
+               />
+            </div>
         </div>
     );
 };
