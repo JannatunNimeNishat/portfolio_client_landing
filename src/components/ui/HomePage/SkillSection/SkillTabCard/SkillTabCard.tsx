@@ -13,7 +13,7 @@ const SkillTabCard = ({ skillData }: { skillData: any }) => {
           {percentage}%
         </p>
       </div>
-      <Progress className="text-green-500 absolute -bottom-2 " showInfo={false}  strokeColor={"green"} status="active" percent={percentage} />
+      <Progress className="text-green-500 absolute left-0 -bottom-2 " showInfo={false}  strokeColor={"green"} status="active" percent={percentage} />
     </div>
   );
 };

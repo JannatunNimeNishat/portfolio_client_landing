@@ -59,7 +59,7 @@ const SkillTabs = ({
         </button>
       </div>
       {/* tab body */}
-      <div className="grid grid-cols-2 gap-x-10 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 min-h-[250px]  mb-5 ">
         {activeTab === 1 &&
           webSkills?.map((skillData: any, index: number) => (
             <SkillTabCard key={index} skillData={skillData} />
