@@ -11,7 +11,6 @@ const SkillSection = async() => {
     const skillSectionData = await res.json();
     const webSkills = skillSectionData?.data?.filter((skill:any) => skill?.category === "Web");
     const programmingSkills = skillSectionData?.data?.filter((skill:any) => skill?.category === "Programming");
-    console.log(programmingSkills);
 
     return (
         <div className=" min-h-[85vh]  relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
