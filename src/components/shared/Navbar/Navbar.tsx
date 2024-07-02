@@ -126,15 +126,26 @@ const Navbar = () => {
                 className={`${pathName === "/about" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium text-[18px]
           `}
-                href={"/about"}
+                href={"#about"}
+               // href={"/about"}
               >
                 About
+              </Link>
+              <Link
+                className={`${pathName === "/about" ? "text-green-500" : ""}
+          hover:text-green-500 duration-150 font-medium text-[18px]
+          `}
+                href={"#education"}
+               // href={"/about"}
+              >
+                Education
               </Link>
               <Link
                 className={`${pathName === "/skill" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium
           `}
-                href={"/skill"}
+                href={"#skill"}
+                // href={"/skill"}
               >
                 SKILL
               </Link>
@@ -142,12 +153,14 @@ const Navbar = () => {
                 className={`${pathName === "/project" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium
           `}
-                href={"/project"}
+                href={"#project"}
+                //href={"/project"}
               >
                 PROJECT
               </Link>
               <Link
-                href={"/contact"}
+                href={"#contact"}
+                // href={"/contact"}
                 className={`${pathName === "/contact" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}

@@ -16,7 +16,7 @@ const SkillSection = async () => {
   );
 
   return (
-    <div className=" min-h-[85vh]  relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
+    <div id="skill" className=" min-h-[85vh]  relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
       <div className="lg:w-8/12 mx-auto px-8 lg:px-0">
         <div className="text-center bg-gray-700 text-white px-3 py-1 rounded transform my-8 w-3/4 mx-auto block lg:hidden ">
           MY SKILLS

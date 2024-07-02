@@ -17,7 +17,7 @@ const AboutSection = async () => {
   const { desc, photoUrl } = activeAboutSectionData[0] || {};
 
   return (
-    <div className=" min-h-[85vh]  relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
+    <div id="about" className=" min-h-[85vh]  relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
       <div className=" w-full px-5 lg:px-0  lg:w-8/12 mx-auto grid  lg:grid-cols-5 gap-12">
       <div className="text-center bg-gray-700 text-white px-3 py-1 rounded transform my-8 w-3/4 mx-auto block lg:hidden ">
           ABOUT ME

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
@@ -13,7 +13,6 @@ interface IFormInput {
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const [messageState, setMessageState] = useState(false);
 
   const defaultValues = {
     name: "",
@@ -52,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="  py-24 relative   min-h-screen flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
+    <div id="contact" className="  py-24 relative   min-h-screen flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
       <div className="lg:w-8/12 mx-auto px-5 lg:px-0 ">
       <div className="text-center bg-gray-700 text-white px-3 py-1 rounded transform my-5 w-3/4 mx-auto block lg:hidden ">
           CONTACT WITH ME
