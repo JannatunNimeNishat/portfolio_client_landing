@@ -35,7 +35,7 @@ const AboutSection = async () => {
         </div>
         <div className=" lg:col-span-2 order-1 lg:order-2 w-full ">
           <Image
-            className=" w-full h-full lg:w-[430px] lg:h-[430px] mx-auto rounded-md grayscale hover:grayscale-0 transition-all lg:hover:scale-105 duration-200 ease-in-out"
+            className=" w-full h-full lg:w-[430px] lg:h-[430px] mx-auto rounded-md grayscale hover:grayscale-0 transition-all lg:hover:scale-105 duration-300 ease-in-out"
             width={430}
             height={430}
             src={photoUrl}
@@ -48,7 +48,7 @@ const AboutSection = async () => {
         <div className="text-center bg-gray-700 text-white px-3 py-1 rounded transform rotate-90">
           ABOUT ME 
         </div>
-        
+
       </div>
     </div>
   );

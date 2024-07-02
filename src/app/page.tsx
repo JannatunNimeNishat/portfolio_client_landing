@@ -1,6 +1,7 @@
 import AboutSection from "@/components/ui/HomePage/AboutSection/AboutSection";
 import Education from "@/components/ui/HomePage/Education/Education";
 import HeroSection from "@/components/ui/HomePage/HeroSection/HeroSection";
+import Projects from "@/components/ui/HomePage/Projects/Projects";
 import SkillSection from "@/components/ui/HomePage/SkillSection/SkillSection";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutSection />
       <Education />
       <SkillSection />
+      <Projects/>
     </div>
   );
 }
