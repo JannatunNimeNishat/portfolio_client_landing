@@ -5,7 +5,7 @@ const SkillTabCard = ({ skillData }: { skillData: any }) => {
   
   const { name, percentage } = skillData || {};
   return (
-    <div className="relative bg-[#1d293a] py-4 mt-6 rounded-md">
+    <div className="relative bg-[#1d293a] py-6 mt-6 rounded-md">
       {" "}
       <div className=" flex items-center justify-between  px-4">
         <p className="text-xl font-bold">{name}</p>
