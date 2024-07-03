@@ -40,7 +40,7 @@ const SingleBlogPage = ({ params }: { params: any }) => {
 
   const { title, imageURL, description, date, ert, tags } = selectedBlog || {};
   return (
-    <div className="max-w-[1440px]  mx-auto text-white">
+    <div className="max-w-[1440px]  mx-auto text-white py-10 lg:py-0">
       <div className="lg:w-9/12 mx-auto py-20 px-5 lg:px-0 flex flex-col gap-5 rounded-md ">
         <Image  className="h-full w-full  grayscale hover:grayscale-0 transition-all duration-300 " height={350} width={350} src={imageURL} alt="blog image" />
         <h1 className="text-4xl font-bold text-green-500 text-center pt-10 pb-2">{title}</h1>

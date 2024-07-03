@@ -40,9 +40,9 @@ const BlogPage = () => {
     <div className="max-w-[1440px]  mx-auto text-white">
       <div className="lg:w-9/12 mx-auto py-20 px-5 lg:px-0 flex flex-col gap-5 rounded-md ">
         {blogData?.map((blog: any, index: number) => (
-          <div key={index} className="border p-5 flex  gap-10 ">
+          <div key={index} className="border p-5 flex flex-col lg:flex-row gap-10 ">
             <Image
-              className="h-full   grayscale hover:grayscale-0 transition-all duration-300 "
+              className="h-full w-full  grayscale hover:grayscale-0 transition-all duration-300 "
               height={350}
               width={400}
               src={blog?.imageURL}

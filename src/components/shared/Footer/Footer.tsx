@@ -12,7 +12,7 @@ const Footer = () => {
                 <Link className="hover:text-green-500 duration-200 ease-out" href={"https://x.com/NimeNishat"} target="_blank">TWITTER</Link>
                 <Link className="hover:text-green-500 duration-200 ease-out" href={"https://www.facebook.com/jannatunbd/"} target="_blank">FACEBOOK</Link>
             </div>
-            <p className="hover:text-green-500 duration-200 ease-out">Md.Jannatun Nime </p>
+            <p className="hidden lg:block hover:text-green-500 duration-200 ease-out">Md.Jannatun Nime </p>
             </div>
         </div>
     );
