@@ -1,12 +1,14 @@
 import { ExportOutlined, GithubOutlined } from "@ant-design/icons";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectCard = ({ projectData }: { projectData: any }) => {
-  const { title, desc, projectImg, technologyUsed, liveLink, gitLinks } =
+  const { title, desc, projectImg, technologyUsed, liveLink, gitLinks,_id } =
     projectData || {};
 
   return (
-    <div className="bg-[#1d293a] text-white rounded-md group cursor-default">
+    <Link href={`/project/${_id}`}>
+    <div className="bg-[#1d293a] text-white rounded-md group cursor-pointer">
       <Image
         className="w-full rounded-t-md grayscale group-hover:grayscale-0 transition-all duration-300 "
         height={350}
@@ -57,6 +59,7 @@ const ProjectCard = ({ projectData }: { projectData: any }) => {
        
       </div>
     </div>
+    </Link>
   );
 };
 
