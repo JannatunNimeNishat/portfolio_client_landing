@@ -1,12 +1,32 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
   const pathName = usePathname();
   const [smNavbarOptions, setSmNavbarOptions] = useState(false);
+  const [isScrolledUp, setIsScrolledUp] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < lastScrollY) {
+        setIsScrolledUp(true); // Set isScrolledUp to true when scrolling up
+      } else {
+        setIsScrolledUp(false); // Set isScrolledUp to false when scrolling down
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll); // Listen for scroll events
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Clean up event listener
+    };
+  }, [lastScrollY]);
   return (
     <>
       {/* sm nav */}
@@ -122,7 +142,9 @@ const Navbar = () => {
         </div>
       </div>
       {/* lg navbar */}
-      <div className="hidden lg:block  w-full mx-auto shadow-lg bg-[#111a28]">
+      <div className={`hidden lg:block w-full mx-auto shadow-lg bg-[#111a28] ${isScrolledUp ? 'fixed top-0 left-0 right-0 z-10 duration-300' : ''}`}>
+      
+      {/* <div className="hidden lg:block  w-full mx-auto shadow-lg bg-[#111a28]"> */}
         <div className=" w-8/12 mx-auto lg:flex items-center  justify-between ">
           {/* logo */}
           <div className="  text-left flex justify-start py-5 w-full">
