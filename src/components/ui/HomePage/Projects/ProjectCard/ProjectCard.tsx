@@ -16,7 +16,7 @@ const ProjectCard = ({ projectData }: { projectData: any }) => {
       />
       <div className="p-4 mt-0">
         <h3 className="text-xl font-bold">{title}</h3>
-        <p className="my-3 text-[12px]">{desc}</p>
+        <p className="my-3 text-[12px]">{`${desc?.slice(0,150)}...`}</p>
       {/* links */}
         <div className="flex items-center justify-center lg:justify-start gap-3 ">
             {/* git client */}
@@ -24,7 +24,7 @@ const ProjectCard = ({ projectData }: { projectData: any }) => {
             <a
               href={gitLinks?.client}
               target="_blank"
-              className="text-xl text-gray-500 hover:text-white "
+              className="text-xl text-gray-500 hover:text-green-500 "
             >
               <GithubOutlined />
             </a>
@@ -35,7 +35,7 @@ const ProjectCard = ({ projectData }: { projectData: any }) => {
             <a
               href={liveLink?.client}
               target="_blank"
-              className="text-xl text-gray-500 hover:text-white "
+              className="text-xl text-gray-500 hover:text-green-500 "
             >
               <ExportOutlined />
             </a>
@@ -43,11 +43,14 @@ const ProjectCard = ({ projectData }: { projectData: any }) => {
           </div>
         </div>
         {/* technology used */}
-        <p className="mt-3 text-sm">Technology Used:</p>
-        <div className="grid grid-cols-2 mt-1">
+        <p className="mt-4 text-sm">Technology Used:</p>
+        <div className="grid grid-cols-2 mt-2">
             {
               technologyUsed?.map((item:any,index:number)=>{
-                return <p key={index} className="text-[12px]">{item}</p>
+                return <div key={index} className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-gray-500 duration-200 group-hover:bg-green-500"/>
+                  <p  className="text-[12px]">{item}</p>
+                </div>
               })  
             }
         </div>

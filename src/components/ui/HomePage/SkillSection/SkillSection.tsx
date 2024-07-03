@@ -28,7 +28,7 @@ const SkillSection = async () => {
         />
       </div>
       {/* section title  */}
-      <div className=" absolute right-0 mt-12 top-1/2 transform -translate-y-1/2 hidden lg:flex flex-col items-center gap-4">
+      <div className=" absolute left-0 mt-12 top-1/2 transform -translate-y-1/2 hidden lg:flex flex-col items-center gap-4">
         <div className="text-center bg-gray-700 text-white px-3 py-1 rounded transform rotate-90">
           MY SKILLS
         </div>
