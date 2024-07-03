@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       {/* sm nav */}
-      <div className=" flex lg:hidden justify-between items-center px-3 py-[30px] shadow-lg ">
+      <div className=" flex lg:hidden justify-between items-center px-3 py-[30px] shadow-lg bg-[#111a28] ">
         <figure>
           <Link
             href={"/"}
@@ -24,16 +24,16 @@ const Navbar = () => {
           className={`duration-500  cursor-pointer`}
           onClick={() => setSmNavbarOptions(true)}
         >
-          <MenuOutlined className="text-3xl" />
+          <MenuOutlined className="text-3xl text-white" />
         </figure>
       </div>
       {/* sm nav bar options */}
       <div
-        className={` fixed  top-0 right-0 z-10 w-full h-full bg-white  ${
+        className={` fixed  top-0 right-0 z-10 w-full h-full bg-[#111a28] text-white  ${
           smNavbarOptions ? "translate-x-0 z-10" : "translate-x-full z-10"
         } duration-300  `}
       >
-        <div className="flex justify-between items-center mx-4 py-[24px] font-customFontGroteskRegular">
+        <div className="flex justify-between items-center text-white mx-4 py-[24px] font-customFontGroteskRegular">
           <Link
             href={"/"}
             onClick={() => setSmNavbarOptions(false)}
@@ -55,7 +55,7 @@ const Navbar = () => {
             onClick={() => setSmNavbarOptions(false)}
             href={"/"}
             className={`${
-              pathName === "/" ? "text-green-500" : "text-[#0F172A] "
+              pathName === "/" ? "text-green-500" : ""
             }
             text-[18px] font-medium leading-[26px]
             `}
@@ -65,31 +65,53 @@ const Navbar = () => {
 
           <Link
             onClick={() => setSmNavbarOptions(false)}
-            href={"/aboutUs"}
+            href={"#about"}
             className={`${
-              pathName === "/aboutUs" ? "text-green-500" : "text-[#0F172A] "
+              pathName === "/about" ? "text-green-500" : " "
             }
             text-[18px] font-medium leading-[26px]
             `}
           >
-            About Us
+            About
           </Link>
 
           <Link
-            href={"/bloodDonors"}
+            href={"#education"}
             className={`${
-              pathName === "/bloodDonors" ? "text-green-500" : "text-[#0F172A] "
+              pathName === "/bloodDonors" ? "text-green-500" : " "
             }
             text-[18px] font-medium leading-[26px]
             `}
             onClick={() => setSmNavbarOptions(false)}
           >
-            Blood Donors
+            Education
           </Link>
           <Link
-            href={"/contact"}
+            href={"#skill"}
             className={`${
-              pathName === "/contact" ? "text-green-500" : "text-[#0F172A] "
+              pathName === "/bloodDonors" ? "text-green-500" : " "
+            }
+            text-[18px] font-medium leading-[26px]
+            `}
+            onClick={() => setSmNavbarOptions(false)}
+          >
+            Skill
+          </Link>
+          <Link
+            href={"#project"}
+            className={`${
+              pathName === "/bloodDonors" ? "text-green-500" : " "
+            }
+            text-[18px] font-medium leading-[26px]
+            `}
+            onClick={() => setSmNavbarOptions(false)}
+          >
+            Project
+          </Link>
+          <Link
+            href={"#contact"}
+            className={`${
+              pathName === "/contact" ? "text-green-500" : " "
             }
             text-[18px] font-medium leading-[26px]
             `}
