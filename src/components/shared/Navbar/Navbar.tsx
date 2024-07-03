@@ -7,7 +7,7 @@ import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 const Navbar = () => {
   const pathName = usePathname();
   const [smNavbarOptions, setSmNavbarOptions] = useState(false);
-  const [isScrolledUp, setIsScrolledUp] = useState(false);
+  /*   const [isScrolledUp, setIsScrolledUp] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -32,8 +32,8 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   if (!hasMounted) {
-    return null; // Return null until the component is mounted
-  }
+    return null; 
+  } */
   return (
     <>
       {/* sm nav */}
@@ -81,9 +81,7 @@ const Navbar = () => {
           <Link
             onClick={() => setSmNavbarOptions(false)}
             href={"/"}
-            className={`${
-              pathName === "/" ? "text-green-500" : ""
-            }
+            className={`${pathName === "/" ? "text-green-500" : ""}
             text-[18px] font-medium leading-[26px]
             `}
           >
@@ -93,9 +91,7 @@ const Navbar = () => {
           <Link
             onClick={() => setSmNavbarOptions(false)}
             href={"#about"}
-            className={`${
-              pathName === "/about" ? "text-green-500" : " "
-            }
+            className={`${pathName === "/about" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
           >
@@ -104,9 +100,7 @@ const Navbar = () => {
 
           <Link
             href={"#education"}
-            className={`${
-              pathName === "/bloodDonors" ? "text-green-500" : " "
-            }
+            className={`${pathName === "/bloodDonors" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
             onClick={() => setSmNavbarOptions(false)}
@@ -115,9 +109,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"#skill"}
-            className={`${
-              pathName === "/bloodDonors" ? "text-green-500" : " "
-            }
+            className={`${pathName === "/bloodDonors" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
             onClick={() => setSmNavbarOptions(false)}
@@ -126,9 +118,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"#project"}
-            className={`${
-              pathName === "/bloodDonors" ? "text-green-500" : " "
-            }
+            className={`${pathName === "/bloodDonors" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
             onClick={() => setSmNavbarOptions(false)}
@@ -137,21 +127,28 @@ const Navbar = () => {
           </Link>
           <Link
             href={"#contact"}
-            className={`${
-              pathName === "/contact" ? "text-green-500" : " "
-            }
+            className={`${pathName === "/contact" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
             onClick={() => setSmNavbarOptions(false)}
           >
             Contact
           </Link>
+          <Link
+            href={"/blog"}
+            className={`${pathName === "/blog" ? "text-green-500" : " "}
+            text-[18px] font-medium leading-[26px]
+            `}
+            onClick={() => setSmNavbarOptions(false)}
+          >
+            Blog
+          </Link>
         </div>
       </div>
       {/* lg navbar */}
-      <div className={` w-full mx-auto shadow-lg bg-[#111a28] ${isScrolledUp ? 'fixed top-0 left-0 right-0 z-10 duration-300' : 'hidden lg:block'}`}>
-      
-      {/* <div className="hidden lg:block  w-full mx-auto shadow-lg bg-[#111a28]"> */}
+      {/* <div className={` w-full mx-auto shadow-lg bg-[#111a28] ${isScrolledUp ? 'fixed top-0 left-0 right-0 z-10 duration-300' : 'hidden lg:block'}`}> */}
+
+      <div className="hidden lg:block  w-full mx-auto shadow-lg bg-[#111a28]">
         <div className=" w-8/12 mx-auto lg:flex items-center  justify-between ">
           {/* logo */}
           <div className="  text-left flex justify-start py-5 w-full">
@@ -164,74 +161,94 @@ const Navbar = () => {
           </div>
           {/* links */}
           <div className="flex items-center  w-full   py-5 text-white">
-            <ul className="flex items-center gap-10 ">
-              <Link
-                className={`${pathName === "/" ? "text-green-500" : ""}
+            {pathName !== "/blog" ? (
+              <ul className="flex items-center gap-10 ">
+                <Link
+                  className={`${pathName === "/" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium text-[18px]
           `}
-                href={"/"}
-              >
-                Home
-              </Link>
-              <Link
-                className={`${pathName === "/about" ? "text-green-500" : ""}
+                  href={"/"}
+                >
+                  Home
+                </Link>
+                <Link
+                  className={`${pathName === "/about" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium text-[18px]
           `}
-                href={"#about"}
-               // href={"/about"}
-              >
-                About
-              </Link>
-              <Link
-                className={`${pathName === "/about" ? "text-green-500" : ""}
+                  href={"#about"}
+                  // href={"/about"}
+                >
+                  About
+                </Link>
+                <Link
+                  className={`${pathName === "/about" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium text-[18px]
           `}
-                href={"#education"}
-               // href={"/about"}
-              >
-                Education
-              </Link>
-              <Link
-                className={`${pathName === "/skill" ? "text-green-500" : ""}
+                  href={"#education"}
+                  // href={"/about"}
+                >
+                  Education
+                </Link>
+                <Link
+                  className={`${pathName === "/skill" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium
           `}
-                href={"#skill"}
-                // href={"/skill"}
-              >
-                SKILL
-              </Link>
-              <Link
-                className={`${pathName === "/project" ? "text-green-500" : ""}
+                  href={"#skill"}
+                  // href={"/skill"}
+                >
+                  SKILL
+                </Link>
+                <Link
+                  className={`${pathName === "/project" ? "text-green-500" : ""}
           hover:text-green-500 duration-150 font-medium
           `}
-                href={"#project"}
-                //href={"/project"}
-              >
-                PROJECT
-              </Link>
-              <Link
-                href={"#contact"}
-                // href={"/contact"}
-                className={`${pathName === "/contact" ? "text-green-500" : " "}
+                  href={"#project"}
+                  //href={"/project"}
+                >
+                  PROJECT
+                </Link>
+                <Link
+                  href={"#contact"}
+                  // href={"/contact"}
+                  className={`${
+                    pathName === "/contact" ? "text-green-500" : " "
+                  }
             text-[18px] font-medium leading-[26px]
             `}
 
-                //    onClick={() => setSmNavbarOptions(false)}
-              >
-                CONTACT
-              </Link>
-
-              <Link
-                href={"/blog"}
-                className={`${pathName === "/blog" ? "text-green-500" : " "}
+                  //    onClick={() => setSmNavbarOptions(false)}
+                >
+                  CONTACT
+                </Link>
+                <Link
+                  href={"/blog"}
+                  className={`${pathName === "/blog" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
-
-                //onClick={() => setSmNavbarOptions(false)}
-              >
-                BLOG
-              </Link>
-            </ul>
+                >
+                  BLOG
+                </Link>
+              </ul>
+            ) : (
+              <ul className="flex items-center gap-10  w-full justify-end ">
+                {/* <Link
+                  className={`${pathName === "/" ? "text-green-500" : ""}
+          hover:text-green-500 duration-150 font-medium text-[18px]
+          `}
+                  href={"/"}
+                >
+                  Home
+                </Link> */}
+                <Link
+                  href={"/blog"}
+                  className={`${pathName === "/blog" ? "text-green-500" : " "}
+            text-[18px] font-medium leading-[26px]
+            `}
+                >
+                  BLOG
+                </Link>
+              </ul>
+            )}
           </div>
         </div>
       </div>
