@@ -9,24 +9,31 @@ const Navbar = () => {
   const [smNavbarOptions, setSmNavbarOptions] = useState(false);
   const [isScrolledUp, setIsScrolledUp] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY < lastScrollY) {
-        setIsScrolledUp(true); // Set isScrolledUp to true when scrolling up
+        setIsScrolledUp(true);
       } else {
-        setIsScrolledUp(false); // Set isScrolledUp to false when scrolling down
+        setIsScrolledUp(false);
       }
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll); // Listen for scroll events
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Clean up event listener
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
+  if (!hasMounted) {
+    return null; // Return null until the component is mounted
+  }
   return (
     <>
       {/* sm nav */}
@@ -142,7 +149,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* lg navbar */}
-      <div className={`hidden lg:block w-full mx-auto shadow-lg bg-[#111a28] ${isScrolledUp ? 'fixed top-0 left-0 right-0 z-10 duration-300' : ''}`}>
+      <div className={` w-full mx-auto shadow-lg bg-[#111a28] ${isScrolledUp ? 'fixed top-0 left-0 right-0 z-10 duration-300' : 'hidden lg:block'}`}>
       
       {/* <div className="hidden lg:block  w-full mx-auto shadow-lg bg-[#111a28]"> */}
         <div className=" w-8/12 mx-auto lg:flex items-center  justify-between ">
