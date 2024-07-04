@@ -16,7 +16,7 @@ const SkillTabs = ({
   return (
     <div>
       {/* tab headers */}
-      <div className="flex items-center gap-5">
+      <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-5">
         <button
           onClick={() => handleActiveTabClick(1)}
           className={`${
