@@ -34,6 +34,7 @@ const Navbar = () => {
   if (!hasMounted) {
     return null; 
   } */
+
   return (
     <>
       {/* sm nav */}
@@ -77,90 +78,100 @@ const Navbar = () => {
           </figure>
         </div>
         <hr />
-        {pathName === "/blog" || pathName === "/blog/1"  || pathName === "/blog/2" || pathName === "/blog/3" ?
-        <div className="flex flex-col gap-[24px] items-end mt-[16px] px-[18px] ">
-        
-        <Link
-          href={"/blog"}
-          className={`${pathName === "/blog" ? "text-green-500" : " "}
+        {pathName === "/blog" ||
+        pathName === "/blog/1" ||
+        pathName === "/blog/2" ||
+        pathName === "/blog/3" ||
+        pathName.includes("/project/") ? (
+          <div className="flex flex-col gap-[24px] items-end mt-[16px] px-[18px] ">
+            <Link
+                  className={`${pathName === "/" ? "text-green-500" : ""}
+        hover:text-green-500 duration-150 font-medium text-[18px]
+        `}
+                  href={"/"}
+                  onClick={() => setSmNavbarOptions(false)}
+                >
+                  Home
+                </Link>
+            <Link
+              href={"/blog"}
+              className={`${pathName === "/blog" ? "text-green-500" : " "}
           text-[18px] font-medium leading-[26px]
           `}
-          onClick={() => setSmNavbarOptions(false)}
-        >
-          Blog
-        </Link>
-      </div>
-        :
-
+              onClick={() => setSmNavbarOptions(false)}
+            >
+              Blog
+            </Link>
+          </div>
+        ) : (
           <div className="flex flex-col gap-[24px] items-end mt-[16px] px-[18px] ">
-          <Link
-            onClick={() => setSmNavbarOptions(false)}
-            href={"/"}
-            className={`${pathName === "/" ? "text-green-500" : ""}
+            <Link
+              onClick={() => setSmNavbarOptions(false)}
+              href={"/"}
+              className={`${pathName === "/" ? "text-green-500" : ""}
             text-[18px] font-medium leading-[26px]
             `}
-          >
-            Home
-          </Link>
+            >
+              Home
+            </Link>
 
-          <Link
-            onClick={() => setSmNavbarOptions(false)}
-            href={"#about"}
-            className={`${pathName === "/about" ? "text-green-500" : " "}
+            <Link
+              onClick={() => setSmNavbarOptions(false)}
+              href={"#about"}
+              className={`${pathName === "/about" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
-          >
-            About
-          </Link>
+            >
+              About
+            </Link>
 
-          <Link
-            href={"#education"}
-            className={`${pathName === "/education" ? "text-green-500" : " "}
+            <Link
+              href={"#education"}
+              className={`${pathName === "/education" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
-            onClick={() => setSmNavbarOptions(false)}
-          >
-            Education
-          </Link>
-          <Link
-            href={"#skill"}
-            className={`${pathName === "/skill" ? "text-green-500" : " "}
+              onClick={() => setSmNavbarOptions(false)}
+            >
+              Education
+            </Link>
+            <Link
+              href={"#skill"}
+              className={`${pathName === "/skill" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
-            onClick={() => setSmNavbarOptions(false)}
-          >
-            Skill
-          </Link>
-          <Link
-            href={"#project"}
-            className={`${pathName === "/project" ? "text-green-500" : " "}
+              onClick={() => setSmNavbarOptions(false)}
+            >
+              Skill
+            </Link>
+            <Link
+              href={"#project"}
+              className={`${pathName === "/project" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
-            onClick={() => setSmNavbarOptions(false)}
-          >
-            Project
-          </Link>
-          <Link
-            href={"#contact"}
-            className={`${pathName === "/contact" ? "text-green-500" : " "}
+              onClick={() => setSmNavbarOptions(false)}
+            >
+              Project
+            </Link>
+            <Link
+              href={"#contact"}
+              className={`${pathName === "/contact" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
-            onClick={() => setSmNavbarOptions(false)}
-          >
-            Contact
-          </Link>
-          <Link
-            href={"/blog"}
-            className={`${pathName === "/blog" ? "text-green-500" : " "}
+              onClick={() => setSmNavbarOptions(false)}
+            >
+              Contact
+            </Link>
+            <Link
+              href={"/blog"}
+              className={`${pathName === "/blog" ? "text-green-500" : " "}
             text-[18px] font-medium leading-[26px]
             `}
-            onClick={() => setSmNavbarOptions(false)}
-          >
-            Blog
-          </Link>
-        </div>
-        }
-     
+              onClick={() => setSmNavbarOptions(false)}
+            >
+              Blog
+            </Link>
+          </div>
+        )}
       </div>
       {/* lg navbar */}
       {/* <div className={` w-full mx-auto shadow-lg bg-[#111a28] ${isScrolledUp ? 'fixed top-0 left-0 right-0 z-10 duration-300' : 'hidden lg:block'}`}> */}
@@ -178,26 +189,29 @@ const Navbar = () => {
           </div>
           {/* links */}
           <div className="flex items-center  w-full   py-5 text-white">
-            {pathName === "/blog" || pathName === "/blog/1"  || pathName === "/blog/2" || pathName === "/blog/3" ? (
+            {pathName === "/blog" ||
+            pathName === "/blog/1" ||
+            pathName === "/blog/2" ||
+            pathName === "/blog/3" ||
+            pathName.includes("/project/") ? (
               <ul className="flex items-center gap-10  w-full justify-end ">
-              {/* <Link
-                className={`${pathName === "/" ? "text-green-500" : ""}
+                <Link
+                  className={`${pathName === "/" ? "text-green-500" : ""}
         hover:text-green-500 duration-150 font-medium text-[18px]
         `}
-                href={"/"}
-              >
-                Home
-              </Link> */}
-              <Link
-                href={"/blog"}
-                className={`${pathName === "/blog" ? "text-green-500" : " "}
+                  href={"/"}
+                >
+                  Home
+                </Link>
+                <Link
+                  href={"/blog"}
+                  className={`${pathName === "/blog" ? "text-green-500" : " "}
           text-[18px] font-medium leading-[26px]
           `}
-              >
-                BLOG
-              </Link>
-            </ul>
-              
+                >
+                  BLOG
+                </Link>
+              </ul>
             ) : (
               <ul className="flex items-center gap-10 ">
                 <Link
