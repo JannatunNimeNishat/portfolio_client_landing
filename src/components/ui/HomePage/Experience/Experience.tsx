@@ -11,7 +11,7 @@ const Experience = async() => {
     const experienceSectionData = await res.json();
   
     return (
-        <div  id="project" className="  py-24 relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
+        <div   className="  py-24 relative    flex items-center justify-center text-center lg:text-start lg:justify-start text-white">
         <div className="lg:w-8/12 mx-auto px-5 lg:px-0 ">
         <div className="text-center bg-gray-700 text-white px-3 py-1 rounded transform my-8 w-3/4 mx-auto block lg:hidden ">
           MY EXPERIENCE
