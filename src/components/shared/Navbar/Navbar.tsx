@@ -264,7 +264,7 @@ const Navbar = () => {
                   className={`${
                     pathName === "/contact" ? "text-green-500" : " "
                   }
-            text-[18px] font-medium leading-[26px]
+            hover:text-green-500 duration-150 font-medium 
             `}
 
                   //    onClick={() => setSmNavbarOptions(false)}
@@ -274,7 +274,7 @@ const Navbar = () => {
                 <Link
                   href={"/blog"}
                   className={`${pathName === "/blog" ? "text-green-500" : " "}
-            text-[18px] font-medium leading-[26px]
+            hover:text-green-500 duration-150 font-medium
             `}
                 >
                   BLOG
