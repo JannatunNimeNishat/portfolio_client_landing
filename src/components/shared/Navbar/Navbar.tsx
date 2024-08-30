@@ -91,7 +91,7 @@ const Navbar = () => {
                   href={"/"}
                   onClick={() => setSmNavbarOptions(false)}
                 >
-                  Home
+                  HOME
                 </Link>
             <Link
               href={"/blog"}
@@ -100,7 +100,7 @@ const Navbar = () => {
           `}
               onClick={() => setSmNavbarOptions(false)}
             >
-              Blog
+              BLOG
             </Link>
           </div>
         ) : (
@@ -112,7 +112,7 @@ const Navbar = () => {
             text-[18px] font-medium leading-[26px]
             `}
             >
-              Home
+              HOME
             </Link>
 
             <Link
@@ -122,7 +122,7 @@ const Navbar = () => {
             text-[18px] font-medium leading-[26px]
             `}
             >
-              About
+              ABOUT
             </Link>
 
             <Link
@@ -132,7 +132,7 @@ const Navbar = () => {
             `}
               onClick={() => setSmNavbarOptions(false)}
             >
-              Education
+              EDUCATION
             </Link>
             <Link
               href={"#skill"}
@@ -141,7 +141,7 @@ const Navbar = () => {
             `}
               onClick={() => setSmNavbarOptions(false)}
             >
-              Skill
+              SKILL
             </Link>
             <Link
               href={"#project"}
@@ -150,7 +150,7 @@ const Navbar = () => {
             `}
               onClick={() => setSmNavbarOptions(false)}
             >
-              Project
+              PROJECT
             </Link>
             <Link
               href={"#contact"}
@@ -159,7 +159,7 @@ const Navbar = () => {
             `}
               onClick={() => setSmNavbarOptions(false)}
             >
-              Contact
+              CONTACT
             </Link>
             <Link
               href={"/blog"}
@@ -168,7 +168,7 @@ const Navbar = () => {
             `}
               onClick={() => setSmNavbarOptions(false)}
             >
-              Blog
+              BLOG
             </Link>
           </div>
         )}
@@ -201,7 +201,7 @@ const Navbar = () => {
         `}
                   href={"/"}
                 >
-                  Home
+                  HOME
                 </Link>
                 <Link
                   href={"/blog"}
@@ -220,7 +220,7 @@ const Navbar = () => {
           `}
                   href={"/"}
                 >
-                  Home
+                  HOME
                 </Link>
                 <Link
                   className={`${pathName === "/about" ? "text-green-500" : ""}
@@ -229,7 +229,7 @@ const Navbar = () => {
                   href={"#about"}
                   // href={"/about"}
                 >
-                  About
+                  ABOUT
                 </Link>
                 <Link
                   className={`${pathName === "/about" ? "text-green-500" : ""}
@@ -238,7 +238,7 @@ const Navbar = () => {
                   href={"#education"}
                   // href={"/about"}
                 >
-                  Education
+                  EDUCATION
                 </Link>
                 <Link
                   className={`${pathName === "/skill" ? "text-green-500" : ""}
