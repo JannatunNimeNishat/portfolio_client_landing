@@ -174,8 +174,6 @@ const Navbar = () => {
         )}
       </div>
       {/* lg navbar */}
-      {/* <div className={` w-full mx-auto shadow-lg bg-[#111a28] ${isScrolledUp ? 'fixed top-0 left-0 right-0 z-10 duration-300' : 'hidden lg:block'}`}> */}
-
       <div className="hidden lg:block  w-full mx-auto shadow-lg bg-[#111a28]">
         <div className=" w-8/12 mx-auto lg:flex items-center  justify-between ">
           {/* logo */}
