@@ -225,7 +225,7 @@ const Navbar = () => {
           hover:text-green-500 duration-150 font-medium text-[18px]
           `}
                   href={"#about"}
-                  // href={"/about"}
+                 
                 >
                   ABOUT
                 </Link>
@@ -234,7 +234,7 @@ const Navbar = () => {
           hover:text-green-500 duration-150 font-medium text-[18px]
           `}
                   href={"#education"}
-                  // href={"/about"}
+                
                 >
                   EDUCATION
                 </Link>
@@ -243,7 +243,7 @@ const Navbar = () => {
           hover:text-green-500 duration-150 font-medium
           `}
                   href={"#skill"}
-                  // href={"/skill"}
+                 
                 >
                   SKILL
                 </Link>
@@ -252,20 +252,19 @@ const Navbar = () => {
           hover:text-green-500 duration-150 font-medium
           `}
                   href={"#project"}
-                  //href={"/project"}
                 >
                   PROJECT
                 </Link>
                 <Link
                   href={"#contact"}
-                  // href={"/contact"}
+                 
                   className={`${
                     pathName === "/contact" ? "text-green-500" : " "
                   }
             hover:text-green-500 duration-150 font-medium 
             `}
 
-                  //    onClick={() => setSmNavbarOptions(false)}
+                 
                 >
                   CONTACT
                 </Link>
