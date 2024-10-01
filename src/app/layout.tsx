@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
 import { Toaster } from "sonner";
+import ScrollToTopComponent from "@/components/shared/ScrollToTop/ScrollToTopComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Navbar />
           <div className="min-h-screen bg-[#111a28]">
             {children}
+            <ScrollToTopComponent/>
             <Toaster />
         </div>
           <Footer />
