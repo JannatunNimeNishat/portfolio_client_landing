@@ -26,7 +26,9 @@ const AboutSection = async () => {
           <p className="text-[18px] leading-[32px]  ">{desc}</p>
           <div className="mt-6">
             <a
-              href="https://drive.google.com/uc?export=download&id=1TvIc0eCG1-Hu_5kkaaNs1JlEmTNOAkL-"
+            href="https://drive.google.com/file/d/1w6ohtpVXNKgXtUgmOYd4SR0FAt47mBsF/view?usp=sharing"
+              target="_blank"
+              // href="https://drive.google.com/uc?export=download&id=1TvIc0eCG1-Hu_5kkaaNs1JlEmTNOAkL-"
               download={"Md.Jannatun Nime Resume.pdf"}
             >
               <PrimaryBtn>Get Resume</PrimaryBtn>
